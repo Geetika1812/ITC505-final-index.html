@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lights Out Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>💡 Lights Out Game</h1>
+  </header>
+
+  <main>
+    <section class="info-section">
+      <div class="card rules-card">
+        <h2>🎮 Game Rules</h2>
+        <ul>
+          <li>Click a square to toggle it and its neighbors.</li>
+          <li>Turn all squares white <strong>or</strong> black to win.</li>
+          <li>Click "Reset" for a new puzzle.</li>
+          <li>"Show Status" gives a progress hint.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="game-section">
+      <div id="board" class="board"></div>
+      <div class="controls">
+        <button onclick="resetGame()">🔁 Reset</button>
+        <button onclick="showStatus()">📊 Show Status</button>
+      </div>
+    </section>
+
+    <section class="addendum-section">
+      <button class="toggle-btn" onclick="toggleAddendum()">📎 View Addendum</button>
+      <div id="addendum" class="card addendum-card hidden">
+        <h2>📝 Addendum</h2>
+        <ul>
+          <li>Started with a basic 5x5 grid and styled using CSS Grid.</li>
+          <li>Used event listeners and DOM manipulation to build interactivity.</li>
+          <li>Ensured solvable puzzles by simulating clicks from a blank board.</li>
+          <li>Victory condition checks if all tiles are white or all are black.</li>
+          <li>Faced challenges in randomization and solved them using toggle logic.</li>
+          <li>This project deepened my understanding of game logic and UI design.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <div id="victory-popup" class="popup hidden">🎉 Hooray! You won! 🎉</div>
+
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+    function toggleAddendum() {
+      document.getElementById("addendum").classList.toggle("hidden");
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

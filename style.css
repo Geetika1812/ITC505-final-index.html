@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a1b9a;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .info-section, .game-section, .addendum-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 6px;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: #ffffffcc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .cell.is-off {
+    background-color: #fff;
+  }
+  
+  .controls {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #6a1b9a;
+  }
+  
+  .card {
+    background-color: #ffffffdd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .rules-card {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .addendum-card {
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 160px;
+    overflow-y: auto;
+    text-align: left;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #6a1b9a;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .card li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #6a1b9a;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .toggle-btn {
+    background-color: #3949ab;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #303f9f;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffdd;
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    font-size: 1.5rem;
+    color: #6a1b9a;
+    text-align: center;
+    z-index: 9999;
+  }
+  
